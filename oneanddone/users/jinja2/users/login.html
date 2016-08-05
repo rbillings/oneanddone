@@ -10,11 +10,12 @@
     <h1>{{ _('Please sign in') }}</h1>
     <p>
       {% trans %}
-        In order to claim tasks on One and Done, you must first sign in using <a href="{{ persona_url }}">Persona</a> and create an account. This way, you can let us know that you're working on a task, and mark a task as completed once you've finished it.
+        In order to claim tasks on One and Done, you must first sign in using <a href="http://127.0.0.1:8000/accounts/fxa/login/?process=login">Firefox Accounts</a> or <a href="{{ persona_url }}">Persona</a> and create an account. This way, you can let us know that you're working on a task, and mark a task as completed once you've finished it.
       {% endtrans %}
     </p>
     <p class="auth-menu">
       {{ browserid_login(text=_('Log in or Register'), next=request.GET.get('next'), color='blue') }}
+      <a href="http://127.0.0.1:8000/accounts/fxa/login/?process=login">
     </p>
   </main>
 {% endblock %}

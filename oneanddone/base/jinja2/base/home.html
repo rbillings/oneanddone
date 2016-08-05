@@ -28,6 +28,7 @@
   </p>
     <p class="auth-menu">
       {% if not user.is_authenticated() %}
+        <a href="http://127.0.0.1:8000/accounts/fxa/login/?process=login"> Sign in with Firefox Accounts</a> or 
         {{ browserid_login(text=_('Sign in with Mozilla Persona'), color='blue') }}
       {% endif %}
     </p>

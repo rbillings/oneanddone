@@ -26,6 +26,9 @@
     "DJANGO_SECRET_KEY": {
       "required": true
     },
+    "FXA_SECRET_KEY": {
+      "required": true
+    },
     "OUTBOUND_EMAIL_ADDRESS": {
       "required": true
     },

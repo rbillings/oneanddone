@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.sites.models import Site
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -23,6 +24,7 @@ def handler404(request):
 
 
 urlpatterns = [
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
     # Generate robots.txt

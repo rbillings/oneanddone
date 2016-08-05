@@ -4,11 +4,15 @@ babel==2.1.1
 
 # sha256: p7AqX3bYmnn4YZJvs04CnMQ0PBOAJSXIGFQqOf54jM4
 commonware==0.4.3
-# sha256: 5KoiH8UvMgdPKV_IFIblTTX-F2KE1qGci_msrt3QWLQ
-django==1.9.5
+
+# sha256: 5QyNRlNDNBPSbs8lqEzNy5x-rHzRuzbu1M2Jxx9DBk4
+django==1.9.8
 
 # sha256: LfpotUw1JurEJ_8T2xyrR7nvlpikOp82jIfI8SOIS3g
 django-ace==1.0.2
+
+# sha256: OCYy_E6F1Xe8tKdH3ND_8LSJP__idZIuhImFVgj1AlI
+django-allauth==0.25.2
 
 # sha256: exG-pKcNZGrYoMwccYc6cFokR5XPwvfUL3klisHFSZk
 django-bmemcached==0.2.2
@@ -20,6 +24,12 @@ django-braces==1.4.0
 # sha256: xhLLJ-qGcXbEJKQwWeHgWPF8Pu0rY1wIhBPlUhE9_Eg
 # sha256: 0bQJgvZSh-qLJ4YlsOMq7fvu7oNMDNZOCfDw2LYnNUE
 django-browserid==1.0.1
+
+# sha256: 0yV2uq13_dnmhZvpfCtqPBem9IQ2Q4nbcx8Gl7ehlmE
+django-csp==2.0.3
+
+# sha256: 69_DKSByMfY7XMtZFAeq28GlJK91LlJpDwZG63_1KUM
+django-extensions==1.6.7
 
 # sha256: 8uJz7TSsu1YJYtXPEpF5NtjfAil98JvTCJuFRtRYQTg
 # sha256: ygF2j97N4TQwHzFwdDIm9g7f9cOTXxJDc3jr2RFQY1M

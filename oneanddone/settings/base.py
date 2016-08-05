@@ -67,9 +67,14 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
 
     # Third-party apps.
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.fxa',
     'commonware.response.cookies',
     'django_ace',
     'django_browserid',
@@ -81,6 +86,24 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'session_csrf',
 ]
+
+SOCIALACCOUNT_QUERY_EMAIL = True
+
+SOCIALACCOUNT_PROVIDERS = \
+    {'fxa': {
+        'SCOPE': ['profile:email', 'profile:uid'],
+        'OAUTH_ENDPOINT': config(
+            'FXA_OAUTH_ENDPOINT',
+            'https://oauth-latest.dev.lcip.org/v1',
+        ),
+        'PROFILE_ENDPOINT': config(
+            'FXA_PROFILE_ENDPOINT',
+            'https://stable.dev.lcip.org/profile/v1'
+        ),
+    }
+}
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'sslify.middleware.SSLifyMiddleware',
@@ -104,6 +127,7 @@ CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'oneanddone.base.context_processors.i18n',
     'oneanddone.base.context_processors.globals',
+    'django.template.context_processors.request',
 )
 
 TEMPLATES = [
@@ -155,6 +179,7 @@ TEMPLATES = [
 AUTHENTICATION_BACKENDS = [
     'django_browserid.auth.BrowserIDBackend',
     'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 # Sessions

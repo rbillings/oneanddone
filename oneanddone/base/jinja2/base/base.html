@@ -80,7 +80,10 @@
                 {% if user.is_authenticated() %}
                   {{ browserid_logout(text=_('Sign out')) }}
                 {% else %}
-                  {{ browserid_login(text=_('Sign in'), color='blue') }}
+                  <a id="fxa_login" href="/accounts/fxa/login/?process=login"">
+                      Sign in with Firefox Accounts
+                  </a>
+                  {{ browserid_login(text=_('Persona'), color='blue') }}
                 {% endif %}
               </li>
             </ul>
