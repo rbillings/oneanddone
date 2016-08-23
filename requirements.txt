@@ -11,8 +11,8 @@ django==1.9.8
 # sha256: LfpotUw1JurEJ_8T2xyrR7nvlpikOp82jIfI8SOIS3g
 django-ace==1.0.2
 
-# sha256: OCYy_E6F1Xe8tKdH3ND_8LSJP__idZIuhImFVgj1AlI
-django-allauth==0.25.2
+# sha256: OYDSxZcyDyiECve7veHXRhSD8VJhTFJ-b9B9h3MBXaU
+django-allauth
 
 # sha256: exG-pKcNZGrYoMwccYc6cFokR5XPwvfUL3klisHFSZk
 django-bmemcached==0.2.2
@@ -180,6 +180,9 @@ pytz==2016.3
 # sha256: ET-7pVManjSUW302szoIToul0GZLcDyBp8Vy2RkZpbg
 # sha256: xXeBXdAPE5QgP8ROuXlySwmPiCZKnviY7kW45enPWH8
 requests==2.9.1
+
+# sha256: l0JmfuVwkJc7q6GKnw3auae4T_1E4jbkStoMZg6vcx8
+requests-oauthlib
 
 # sha256: QYqTw5en7asj5ViNvAZ6x0pyPts9VBvUk295R252Rdo
 # sha256: 4kBSQR_E-9H2cmNVN8P8IzDZSBsYwDF2lbRiWVEskdU

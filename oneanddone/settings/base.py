@@ -74,7 +74,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.fxa',
+    'allauth.socialaccount.providers.google',
     'commonware.response.cookies',
     'django_ace',
     'django_browserid',
@@ -90,18 +90,9 @@ INSTALLED_APPS = [
 SOCIALACCOUNT_QUERY_EMAIL = True
 
 SOCIALACCOUNT_PROVIDERS = \
-    {'fxa': {
-        'SCOPE': ['profile:email', 'profile:uid'],
-        'OAUTH_ENDPOINT': config(
-            'FXA_OAUTH_ENDPOINT',
-            'https://oauth-latest.dev.lcip.org/v1',
-        ),
-        'PROFILE_ENDPOINT': config(
-            'FXA_PROFILE_ENDPOINT',
-            'https://stable.dev.lcip.org/profile/v1'
-        ),
-    }
-}
+    { 'google':
+        { 'SCOPE': ['profile', 'email'],
+          'AUTH_PARAMS': { 'access_type': 'online' } }}
 
 SITE_ID = 1
 
